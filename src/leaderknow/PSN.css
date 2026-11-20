@@ -1,0 +1,447 @@
+/* ==========================================
+   PERSONAL INFO - MAIN CONTAINER
+========================================== */
+.psn-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 25px 20px 60px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+}
+
+/* ==========================================
+   HEADER CARD
+========================================== */
+.psn-header-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.psn-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.psn-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.psn-header-icon {
+  width: 44px;
+  height: 44px;
+  background: #fff5ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #d35400;
+}
+
+.psn-header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d35400; /* Orange heading */
+  margin: 0 0 2px 0;
+}
+
+.psn-header-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+.psn-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+.psn-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: #d35400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.25);
+}
+
+.psn-btn-primary:hover {
+  background: #b84500;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(211, 84, 0, 0.35);
+}
+
+.psn-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.psn-btn-secondary:hover {
+  background: #f4f6f9;
+  border-color: #d35400;
+}
+
+.psn-btn-primary:disabled, .psn-btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.psn-btn-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.psn-btn-menu:hover {
+  background: #f4f6f9;
+  border-color: #d35400;
+}
+
+.psn-dots { font-size: 1.2rem; line-height: 1; }
+
+/* ==========================================
+   ALERT MESSAGES
+========================================== */
+.psn-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+
+.psn-alert-error {
+  background: #fce4ec;
+  border-color: #f8bbd0;
+  color: #b71c1c;
+}
+
+.psn-alert-success {
+  background: #e8f5e9;
+  border-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.psn-alert-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  padding: 0 4px;
+}
+
+.psn-alert-close:hover { opacity: 1; }
+
+/* ==========================================
+   USER INFO BANNER
+========================================== */
+.psn-profile-card {
+  background: #fafafa;
+  border-radius: 14px;
+  border: 1px solid #f0f0f0;
+  padding: 18px 25px;
+  margin-bottom: 25px;
+}
+
+.psn-profile-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.psn-profile-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.psn-profile-icon {
+  font-size: 1.2rem;
+  color: #d35400;
+}
+
+.psn-profile-label {
+  font-weight: 500;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.psn-profile-value {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.psn-profile-divider {
+  width: 1px;
+  height: 30px;
+  background: #e0e0e0;
+}
+
+/* ==========================================
+   DROPDOWNS
+========================================== */
+.psn-dropdown-wrapper {
+  position: relative;
+}
+
+.psn-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0f0f0;
+  padding: 6px 0;
+  z-index: 50;
+}
+
+.psn-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.psn-dropdown-item:hover { background: #f8f9fa; }
+.psn-dropdown-item.psn-danger { color: #e74c3c; }
+.psn-dropdown-item.psn-danger:hover { background: #fef2f2; }
+.psn-dropdown-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 6px 0;
+}
+
+/* ==========================================
+   DETAILS CARDS
+========================================== */
+.psn-details-card,
+.psn-form-card {
+  background: #fafafa;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.psn-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.psn-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #d35400; /* Orange heading */
+  margin: 0;
+}
+
+/* ==========================================
+   VIEW DISPLAY GRID
+========================================== */
+.psn-display-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.psn-display-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.psn-display-icon {
+  font-size: 1.5rem;
+  color: #d35400;
+}
+
+.psn-display-label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.psn-display-value {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+/* ==========================================
+   EDIT FORM GRID
+========================================== */
+.psn-edit-actions-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.psn-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.psn-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.psn-form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.psn-form-input {
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+.psn-form-input:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1);
+}
+
+.psn-form-input:disabled {
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+.psn-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.psn-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.psn-empty-state h3 {
+  color: #555;
+  margin: 0 0 8px 0;
+}
+
+.psn-empty-state p {
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+.psn-loading-wrapper {
+  text-align: center;
+  padding: 80px 20px;
+  color: #888;
+}
+
+.psn-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 15px;
+  border: 4px solid #f0f0f0;
+  border-top: 4px solid #d35400;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 768px) {
+  .psn-container { padding: 15px; }
+  .psn-header-content { flex-direction: column; align-items: stretch; text-align: center; }
+  .psn-header-left { flex-direction: column; }
+  .psn-header-right { justify-content: center; }
+  .psn-form-grid { grid-template-columns: 1fr; }
+  .psn-edit-actions-bar { flex-direction: column; }
+  .psn-btn-primary, .psn-btn-secondary { width: 100%; justify-content: center; }
+  .psn-profile-content { flex-direction: column; align-items: stretch; gap: 15px; }
+  .psn-profile-divider { width: 100%; height: 1px; }
+}

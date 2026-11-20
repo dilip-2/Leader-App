@@ -1,0 +1,517 @@
+/* ===========================
+   VIDEO.CSS - Orange & White Theme
+   Fully Responsive
+=========================== */
+
+:root {
+  --primary: #ff6b00;
+  --primary-dark: #e55d00;
+  --primary-light: #ff8533;
+  --white: #ffffff;
+  --bg-light: #fff8f3;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --shadow: 0 4px 15px rgba(255, 107, 0, 0.15);
+  --shadow-hover: 0 8px 25px rgba(255, 107, 0, 0.25);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+.video-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 20px 25px;
+  border-radius: var(--radius);
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+}
+
+.video-header h2 {
+  color: var(--white);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.add-btn {
+  background: var(--white);
+  color: var(--primary);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   FORMS
+=========================== */
+.media-form,
+.edit-inline-form {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary-light);
+}
+
+.media-form input[type="text"],
+.media-form textarea,
+.media-form input[type="file"],
+.edit-inline-form input[type="text"],
+.edit-inline-form textarea,
+.edit-inline-form input[type="file"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border: 2px solid #ffe0cc;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.media-form input[type="text"]:focus,
+.media-form textarea:focus,
+.edit-inline-form input[type="text"]:focus,
+.edit-inline-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.media-form textarea,
+.edit-inline-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.media-form input[type="file"],
+.edit-inline-form input[type="file"] {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===========================
+   EDIT ACTIONS
+=========================== */
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-actions .upload-btn {
+  flex: 1;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 14px;
+  background: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #fff5f0;
+}
+
+/* ===========================
+   MEDIA GRID
+=========================== */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* ===========================
+   MEDIA CARD
+=========================== */
+.media-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: visible;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #ffe0cc;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===========================
+   DROPDOWN MENU (Scoped to media-card)
+=========================== */
+.media-card .mc-dropdown-container {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+}
+
+.media-card .mc-dropdown-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+
+.media-card .mc-dropdown-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.media-card .mc-dropdown-menu {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  min-width: 130px;
+  border: 1px solid #ffe0cc;
+  z-index: 100;
+}
+
+.media-card .mc-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.media-card .mc-dropdown-item:hover {
+  background: var(--bg-light);
+  color: var(--primary);
+}
+
+.media-card .mc-dropdown-item.delete {
+  color: #dc3545;
+}
+
+.media-card .mc-dropdown-item.delete:hover {
+  background: #fff5f5;
+  color: #c82333;
+}
+
+/* ===========================
+   MEDIA CONTENT
+=========================== */
+.media-video,
+.media-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-light);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.media-card h3 {
+  padding: 18px 18px 8px;
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.media-desc {
+  padding: 0 18px 18px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more-btn {
+  display: block;
+  width: calc(100% - 36px);
+  margin: 0 18px 18px;
+  padding: 12px;
+  background: var(--bg-light);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.read-more-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.empty-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 2px dashed #ffe0cc;
+}
+
+/* ===========================
+   RESPONSIVE - TABLET
+=========================== */
+@media (max-width: 768px) {
+  .video-container {
+    padding: 15px;
+  }
+
+  .video-header {
+    padding: 16px 20px;
+  }
+
+  .video-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .add-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .media-form,
+  .edit-inline-form {
+    padding: 20px;
+  }
+
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .media-video,
+  .media-img {
+    height: 200px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE - MOBILE
+=========================== */
+@media (max-width: 480px) {
+  .video-container {
+    padding: 12px;
+  }
+
+  .video-header {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+  }
+
+  .video-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .add-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .media-form,
+  .edit-inline-form {
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+  }
+
+  .media-form input[type="text"],
+  .media-form textarea,
+  .media-form input[type="file"],
+  .edit-inline-form input[type="text"],
+  .edit-inline-form textarea,
+  .edit-inline-form input[type="file"] {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .upload-btn,
+  .cancel-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .edit-actions {
+    flex-direction: column;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .media-card {
+    border-radius: var(--radius-sm);
+  }
+
+  .media-video,
+  .media-img {
+    height: 180px;
+  }
+
+  .media-card .mc-dropdown-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .media-card .mc-dropdown-menu {
+    top: 38px;
+    min-width: 110px;
+  }
+
+  .media-card .mc-dropdown-item {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .media-card h3 {
+    padding: 14px 14px 6px;
+    font-size: 1.05rem;
+  }
+
+  .media-desc {
+    padding: 0 14px 14px;
+    font-size: 0.9rem;
+  }
+
+  .read-more-btn {
+    width: calc(100% - 28px);
+    margin: 0 14px 14px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .empty-text {
+    padding: 40px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   RESPONSIVE - SMALL MOBILE
+=========================== */
+@media (max-width: 360px) {
+  .video-container {
+    padding: 10px;
+  }
+
+  .video-header h2 {
+    font-size: 1rem;
+  }
+
+  .media-video,
+  .media-img {
+    height: 160px;
+  }
+
+  .media-card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   LANDSCAPE MOBILE
+=========================== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-video,
+  .media-img {
+    height: 150px;
+  }
+}

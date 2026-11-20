@@ -1,0 +1,21 @@
+#docker-compose.server.yml
+
+services:
+  leader-server-app:
+    image: leader-server:1.0
+    container_name: leader-server
+    restart: unless-stopped
+    environment:
+      TZ: Asia/Kolkata
+    ports:
+      - "8012:5000"
+    env_file:
+      - .env
+    networks:
+      - leader-net
+    volumes:
+      - /srv/docker/leader/uploads:/data/uploads
+
+networks:
+  leader-net:
+    external: true

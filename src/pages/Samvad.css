@@ -1,0 +1,207 @@
+/* ==========================================
+   SAMVAD - GLOBAL LAYOUT
+========================================== */
+.samvad-layout {
+  display: flex;
+  gap: 25px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 25px 20px 60px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  min-height: 80vh;
+}
+
+/* ==========================================
+   LEFT SIDEBAR
+========================================== */
+.samvad-sidebar {
+  flex: 0 0 240px;
+  background: #fafafa;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  padding: 25px 15px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px 0;
+  padding: 0 10px;
+}
+
+.sidebar-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0 0 25px 0;
+  padding: 0 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+  background: #fff5ee;
+  color: #d35400;
+}
+
+.sidebar-menu li.active {
+  background: #d35400;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.25);
+}
+
+.menu-icon {
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   RIGHT MAIN CONTENT
+========================================== */
+.samvad-main {
+  flex: 1;
+  min-width: 0; /* Prevents overflow issues */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 0;
+}
+
+/* --- Header & Breadcrumbs --- */
+.samvad-header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.breadcrumb .separator {
+  margin: 0 6px;
+  color: #ccc;
+}
+
+.breadcrumb .current-cat {
+  color: #d35400;
+  font-weight: 600;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+}
+
+.page-desc {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- Sub Tabs (List / Preview) --- */
+.samvad-sub-tabs {
+  display: flex;
+  background: #f4f6f9;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 25px;
+  width: fit-content;
+  border: 1px solid #f0f0f0;
+}
+
+.sub-tab-btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #888;
+}
+
+.sub-tab-btn:hover {
+  color: #d35400;
+}
+
+.sub-tab-btn.active {
+  background: #d35400;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(211, 84, 0, 0.25);
+}
+
+/* --- Content Body --- */
+.samvad-body {
+  min-height: 300px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 992px) {
+  .samvad-layout {
+    flex-direction: column;
+  }
+  
+  .samvad-sidebar {
+    flex: unset;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    position: static;
+    padding: 15px;
+  }
+
+  .sidebar-title, .sidebar-subtitle {
+    display: none;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+  }
+  
+  .sidebar-menu li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 10px 18px;
+    justify-content: center;
+  }
+
+  .samvad-sub-tabs {
+    width: 100%;
+  }
+  
+  .sub-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 16px;
+  }
+}

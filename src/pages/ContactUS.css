@@ -1,0 +1,587 @@
+/* ==========================================
+   CONTACT US - MAIN CONTAINER
+========================================== */
+.contactus-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  min-height: 80vh;
+}
+
+.contactus-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+.contactus-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff5ee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d35400;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contactus-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+}
+
+.contactus-header p {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ==========================================
+   ALERT MESSAGES
+========================================== */
+.alert-message {
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.alert-message.success {
+  background: #e8f5e9;
+  border-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.alert-message.error {
+  background: #fce4ec;
+  border-color: #f8bbd0;
+  color: #b71c1c;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   USER INFO SECTION
+========================================== */
+.user-info-section {
+  margin-bottom: 25px;
+}
+
+.info-card {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 20px 24px;
+  border: 1px solid #f0f0f0;
+}
+
+.info-content h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.input-icon {
+  color: #d35400;
+}
+
+.input-field {
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1);
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-success {
+  background: #d35400;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background: #b84500;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #d0d0d0;
+}
+
+/* ==========================================
+   CARD ACTIONS (Three Dot Menu)
+========================================== */
+.card-actions {
+  position: relative;
+}
+
+.menu-btn {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #f0f0f0;
+  color: #d35400;
+}
+
+.action-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0f0f0;
+  min-width: 140px;
+  padding: 6px 0;
+  z-index: 50;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #f8f9fa;
+}
+
+.menu-item.delete-item {
+  color: #e74c3c;
+}
+
+.menu-item.delete-item:hover {
+  background: #fef2f2;
+}
+
+/* ==========================================
+   EDIT FORM CONTAINER
+========================================== */
+.edit-form-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.office-form-section {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid #f0f0f0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-icon {
+  width: 36px;
+  height: 36px;
+  background: #fff5ee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d35400;
+  font-size: 1rem;
+}
+
+.office-form-section h2 {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.field-icon {
+  color: #d35400;
+  font-size: 0.8rem;
+}
+
+.form-input {
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1);
+}
+
+.copy-btn {
+  background: #2980b9;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #1f618d;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.submit-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #27ae60;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn:hover {
+  background: #219150;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #e74c3c;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+/* ==========================================
+   DATA DISPLAY (Read Only)
+========================================== */
+.data-display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.office-display-card {
+  background: #fafafa;
+  border-radius: 14px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.card-header {
+  background: #ffffff;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  background: #fff5ee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d35400;
+}
+
+.card-title h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #d35400;
+}
+
+.section-title h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item .label {
+  font-weight: 500;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.info-item .value {
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 1024px) {
+  .data-display-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-container {
+    padding: 15px;
+  }
+
+  .contactus-card {
+    padding: 20px;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .info-item .value {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .office-form-section {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,255 @@
+/* ---------------- Page shell ---------------- */
+
+.preview-container {
+  min-height: 100vh;
+  background: #f7f7f5;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #1f2937;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.preview-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #14213d;
+  margin: 0 0 18px;
+}
+
+/* ---------------- Filter bar ---------------- */
+
+.filter-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.status-select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #1f2937;
+  outline: none;
+  min-width: 160px;
+}
+
+.status-select:focus {
+  border-color: #ff9933;
+}
+
+.search-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e53935 0%, #ff9933 100%);
+  transition: opacity 0.15s ease;
+}
+
+.search-button:hover {
+  opacity: 0.9;
+}
+
+/* ---------------- Loading ---------------- */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  gap: 12px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #ff9933;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #5b6b8c;
+  margin: 0;
+}
+
+/* ---------------- Empty state ---------------- */
+
+.no-data {
+  text-align: center;
+  padding: 60px 0;
+  color: #5b6b8c;
+}
+
+.no-data p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.no-data-hint {
+  font-size: 13px;
+  color: #888780;
+}
+
+/* ---------------- Card grid ---------------- */
+
+.appeal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.appeal-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #14213d;
+  margin: 0;
+}
+
+/* ---------------- Status badges ---------------- */
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-open {
+  background: #e6f1fb;
+  color: #0c447c;
+}
+
+.status-resolved {
+  background: #eaf3de;
+  color: #27500a;
+}
+
+.status-pending {
+  background: #faeeda;
+  color: #854f0b;
+}
+
+.status-inprogress {
+  background: #eeedfe;
+  color: #3c3489;
+}
+
+.status-closed {
+  background: #f1efe8;
+  color: #444441;
+}
+
+.status-default {
+  background: #f1efe8;
+  color: #444441;
+}
+
+/* ---------------- Card body ---------------- */
+
+.card-desc {
+  font-size: 14px;
+  color: #5b6b8c;
+  margin: 0;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid #f1f2f4;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.detail-label {
+  color: #5b6b8c;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  color: #1f2937;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* ---------------- Card footer ---------------- */
+
+.card-footer {
+  padding-top: 10px;
+  border-top: 1px solid #f1f2f4;
+}
+
+.view-details-btn {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #14213d;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #14213d;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.view-details-btn:hover {
+  background: #14213d;
+  color: #ffffff;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 500px) {
+  .appeal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+}

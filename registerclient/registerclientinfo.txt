@@ -1,0 +1,17 @@
+
+✅ Connected to MongoDB
+📥 Invoice No: nutantek111
+📅 Invoice Date (Unix Epoch): 1765884570
+👤 Client Name: radhamohansingh
+👤 Client App Name: RMS
+📧 Client Email: radhamohan@gmail.com
+📱 Client Mobile: 7702000726
+AppKey: Raw String Value: nutantek111|1765884570|RMS
+Appkey: Hash Value: 27afbbc96a930aa35295b160ab940629d6d09537f711da8950accf350d0a6135
+✅ Saved AppOwnerInfo with app_key: 27afbbc96a930aa35295b160ab940629d6d09537f711da8950accf350d0a6135
+📧 Input Email: radhamohan@gmail.com
+🔐 Encrypted Email: CYEktDzwtFYho0pQ4rxPkvFXjL4cP19FvIEtFv0siZU=
+📱 Input Mobile: 7702000726
+🔐 Encrypted Mobile: R3V7Ttnr99g8I/PK2mJzqg==
+
+C:\Users\Admin\OneDrive\Desktop\leadrrApp\leader-App\registerclient>
